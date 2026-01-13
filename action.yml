@@ -1,2 +1,4 @@
 cat "Hello"
 git show
+git ls-files
+test.sh
