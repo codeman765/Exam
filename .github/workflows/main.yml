@@ -8,9 +8,8 @@ runs-on: ubuntu-latest # Use windows-latest for PowerShell
 
 steps:
 
-    - name: Check Ubuntu Version
-
-      run: |
+- name: Check Ubuntu Version
+run: |
         echo "--- Using lsb_release -a ---"
         lsb_release -a
         echo "--- Using cat /etc/os-release ---"
@@ -18,16 +17,16 @@ steps:
         run: echo "Runner OS: ${{ runner.os }}"
 
 
-	-name: get all files in repository 
-	run: git ls-files
+-name: get all files in repository 
+run: git ls-files
 
-	-name: get sha commit version
-	run: echo ${{ github.sha }}
-	-name: print files
-	run: test.sh
+-name: get sha commit version
+run: echo ${{ github.sha }}
+-name: print files
+run: test.sh
 
-	- name: Print a simple message (Bash)
-	run: echo "Hello"
+-name: Print a simple message (Bash)
+run: echo "Hello"
 
 env:
   FIRST_NAME: "Amir"
@@ -49,8 +48,7 @@ name: Use a secret in a command
     # Set the secret as an environment variable in the step
     env:
       MY_PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
-
-    run: |
+run: |
       # The value of $MY_PHONE_NUMBER is available to your script
       # but will be masked in the logs.
       echo "Calling phone number with token: $MY_PHONE_NUMBER"
