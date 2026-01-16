@@ -4,15 +4,16 @@ on:
 		branches ["main"]
 	pull_request:
 		 branches ["main"]
+jobs:
 
-build:
-runs-on: ubuntu-latest # Use windows-latest for PowerShell
+	build:
+	runs-on: ubuntu-latest # Use windows-latest for PowerShell
 
     steps:
 
     - name: Check Ubuntu Version
 
-      run: |
+    run: |
         echo "--- Using lsb_release -a ---"
         lsb_release -a
         echo "--- Using cat /etc/os-release ---"
