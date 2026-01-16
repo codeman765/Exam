@@ -1,9 +1,5 @@
 run-name: Demo of printing text by @${{ github.actor }} 🚀
-on: 
-	push: 
-		branches ["main"]
-	pull_request:
-		 branches ["main"]
+on: push()
 
 jobs:
 
