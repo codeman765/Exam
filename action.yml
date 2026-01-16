@@ -1,5 +1,9 @@
 run-name: Demo of printing text by @${{ github.actor }} 🚀
-on: [push]
+on: 
+	push: 
+		branches ["main"]
+	pull_request:
+		 branches ["main"]
 
 build:
 runs-on: ubuntu-latest # Use windows-latest for PowerShell
