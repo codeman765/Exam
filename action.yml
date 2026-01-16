@@ -1,0 +1,12 @@
+cat "Hello"
+git show
+git ls-files
+test.sh
+echo "FIRST_NAME=project ${{ env.First_Name }} >> $GITHUB_ENV
+- name: Print GitHub variables
+        run: |
+          echo "The repository is: $GITHUB_REPOSITORY"
+          echo "The commit SHA is: $GITHUB_SHA"
+        shell: bash LAST_NAME
+- name: Trick to echo GitHub Actions Secret
+    run: echo "${{ secrets.PHONE_NUMBER }}" | sed 's/./& /g'
