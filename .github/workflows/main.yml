@@ -45,7 +45,7 @@ shell: bash
 env: 
 name: Use a secret in a command
 	# Set the secret as an environment variable in the step
-	MY_PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
+	MY_PHONE_NUMBER: ${{ secrets.MY_PHONE_NUMBER }}
 run: |
       # The value of $MY_PHONE_NUMBER is available to your script
       # but will be masked in the logs.
