@@ -28,8 +28,8 @@ run: echo ${{ github.sha }}
 -name: print files
 run: test.sh
 
-      - name: Print a simple message (Bash)
-        run: echo "Hello"
+- name: Print a simple message (Bash)
+run: echo "Hello"
 
 env:
   FIRST_NAME: "Amir"
